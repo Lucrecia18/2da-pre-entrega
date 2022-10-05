@@ -1,0 +1,30 @@
+@mixin flex {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+//main
+@mixin contenido ($filas, $tamanio) {
+    display: inline-block;
+    flex-wrap: nowrap;
+    display: grid;
+    grid-template-columns: repeat($filas, $tamanio);
+    box-sizing: border-box;
+    gap: 0.3rem;
+    justify-content: center;
+}
+
+@mixin medidas ($alto, $anchura) {
+    height: $alto;
+    width: $anchura;
+}
+
+@mixin menu ($tamanio) {
+    text-align: center;
+    box-sizing: border-box;
+    top: 200px;
+    bottom: 50px;
+    border: 1px solid $color-border-menu;
+    font-size: $tamanio;
+    background-color: $color-principal;
+}

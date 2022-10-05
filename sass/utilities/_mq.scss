@@ -1,0 +1,348 @@
+/*media queries para pantallas mas pequeñas */
+@media screen and (max-width:320px) {
+
+    /* Header */
+    header {
+        background-color: $color-principal;
+        text-align: center;
+
+        .foto {
+            text-align: center;
+            @include medidas(120px, 120px)
+        }
+
+        /*Buscador */
+        .buscador {
+            width: 32px;
+        }
+
+        .buscar {
+            text-align: right;
+        }
+
+        /* Menu */
+        .menu {
+            @include menu(10px);
+        }
+    }
+
+    /*Contenido principal */
+    main {
+        width: 300px;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        margin-left: 0.5rem;
+
+        .photo {
+            flex-wrap: nowrap;
+            height: auto;
+            width: 18rem;
+            border-radius: 0.2rem;
+        }
+
+        .texto {
+            font-size: 0.8rem;
+        }
+
+        .texto2 {
+            font-size: 1.3rem;
+        }
+
+        .texto1 {
+            font-size: 0.9rem;
+        }
+    }
+
+
+
+
+    /*Pages */
+    main {
+        .main-desayuno {
+            display: flex;
+            flex-wrap: nowrap;
+            flex-flow: row;
+        }
+
+        .elemento2 {
+            display: none;
+        }
+
+        .elemento1 {
+            display: none;
+        }
+
+        .section-desayuno {
+            display: flex;
+            display: inline-block;
+            flex-wrap: nowrap;
+            flex-direction: row-reverse;
+            display: grid;
+            grid-template-columns: repeat(1, 15rem);
+            box-sizing: border-box;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            margin-left: 1.8rem;
+        }
+    }
+
+    /*Contenido secundario */
+    .contenido,
+    .contenido2,
+    .contenido3 {
+        @include contenido(1, 16rem);
+    }
+}
+
+@media screen and (min-width:768px) {
+
+    /*header*/
+    header {
+        .menu {
+            @include menu(14px)
+        }
+    }
+
+    .foto {
+        text-align: center;
+        @include medidas(170px, 170px)
+    }
+
+    /*Buscador */
+    .buscador {
+        height: 26px;
+        width: 42px;
+    }
+
+    /* principal */
+    main {
+        margin: 2rem;
+
+        .texto {
+            font-size: 0.8rem;
+        }
+
+        .texto2 {
+            font-size: 1.3rem;
+        }
+
+        .texto1 {
+            font-size: 0.9rem;
+        }
+
+        .main-desayuno {
+            justify-content: center;
+        }
+    }
+
+    /*Contenido secundario */
+    .contenido,
+    .contenido2,
+    .contenido3 {
+        @include contenido(3, 16rem);
+    }
+}
+
+@media screen and (min-width:1024px) {
+
+    /*header*/
+    .foto {
+        text-align: center;
+        height: 200px;
+        width: 200px;
+
+    }
+
+    /*Buscador */
+    .buscador {
+        height: 25px;
+        width: 45px;
+    }
+
+    .menu {
+        text-align: right;
+        font-size: 15px;
+    }
+
+    /* Principal */
+    body main {
+        display: grid;
+        padding: 0.3rem;
+        margin: 4rem;
+        grid-template-columns: 36.5rem;
+        grid-template-areas: "pepe pepe2";
+        gap: 0.8rem;
+        background-color: $color-principal;
+        box-shadow: 0.1rem 0.1rem 0.4rem;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-flow: row;
+        font-family: 'Roboto', sans-serif;
+
+        .texto {
+            font-size: 0.8rem;
+        }
+
+        .texto2 {
+            font-size: 1.3rem;
+        }
+
+        .texto1 {
+            font-size: 0.9rem;
+        }
+
+
+        .pepe {
+            grid-area: pepe;
+            text-align: center;
+            background-color: $color-fondo-pepe;
+            border-radius: 0.2rem;
+        }
+
+        .pepe2 {
+            grid-area: pepe2;
+            background-color: $color-principal;
+            align-self: center;
+        }
+
+        .photo {
+            height: 22rem;
+            width: auto;
+            border-radius: 0.2rem;
+        }
+
+    }
+
+    body {
+        background-color: $color-secundario;
+    }
+
+    /*Contenido secundario */
+    .contenido,
+    .contenido2,
+    .contenido3 {
+        @include contenido(4, 15.2rem);
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .main-desayuno {
+        @include flex;
+        flex-flow: row;
+    }
+
+    .section-desayuno {
+        display: inline-block;
+        flex-wrap: nowrap;
+        flex-direction: row-reverse;
+        display: grid;
+        grid-template-columns: repeat(2, 15rem);
+        box-sizing: border-box;
+    }
+
+    .elemento1 {
+        width: 22rem;
+        box-sizing: border-box;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .elemento2 {
+        display: initial;
+        width: 22rem;
+        box-sizing: border-box;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+
+    .contenido2 {
+        margin-left: 0.1rem;
+        margin-right: 0.5rem;
+    }
+}
+
+@media screen and (min-width:1200px) {
+
+    /*header*/
+    header {
+        .foto {
+            text-align: center;
+            height: 250px;
+            width: 250px;
+
+        }
+
+        .buscador {
+            height: 25px;
+            width: 45px;
+        }
+
+        .menu {
+            text-align: right;
+            font-size: 15px;
+        }
+    }
+
+    body main {
+        display: grid;
+        padding: 0.3rem;
+        margin: 4rem;
+        grid-template-columns: 36.5rem;
+        grid-template-areas: "pepe pepe2";
+        gap: 0.8rem;
+        background-color: $color-principal;
+        box-shadow: 0.1rem 0.1rem 0.4rem;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-flow: row;
+        font-family: 'Roboto', sans-serif;
+
+        .texto {
+            font-size: 0.8rem;
+        }
+
+        .texto2 {
+            font-size: 1.3rem;
+        }
+
+        .texto1 {
+            font-size: 0.9rem;
+        }
+
+        .pepe {
+            grid-area: pepe;
+            text-align: center;
+            background-color: $color-fondo-pepe;
+            border-radius: 0.2rem;
+        }
+
+        .pepe2 {
+            grid-area: pepe2;
+            background-color: $color-principal;
+            align-self: center;
+        }
+
+        .photo {
+            height: 22rem;
+            width: auto;
+            border-radius: 0.2rem;
+        }
+
+    }
+
+    body {
+        background-color: $color-secundario;
+    }
+    /*Contenido secundario */
+    .contenido,
+    .contenido2,
+    .contenido3 {
+        @include contenido(5, 15.1rem);
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        margin-left: 0px;
+    }
+}

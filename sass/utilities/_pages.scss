@@ -1,0 +1,74 @@
+/*Htmls de pages */
+.main-desayuno {
+    @include flex;
+    padding: 0.1rem;
+    border-radius: 0.2rem;
+    background-color: $color-principal;
+    box-shadow: 0.1rem 0.1rem 0.4rem;
+    text-align: center;
+    font-size: 0.7rem;
+    font-family: 'Roboto', sans-serif;
+    display: grid;
+    grid-template-areas: 1;
+    row-gap: 0.3rem;
+}
+
+.section-desayuno {
+    display: inline-block;
+    display: grid;
+    grid-template-columns: repeat(2, 13.8rem);
+    box-sizing: border-box;
+    gap: 0.3rem;
+    margin-left: 1rem;
+    justify-content: center;
+}
+
+.elemento1 {
+    justify-self: center;
+}
+
+.elemento2 {
+    display: none;
+}
+
+.contenido2 {
+    @include contenido(2,13.7);
+}
+
+.contenido3 {
+    @include contenido(2,13.9);
+}
+
+/*animaciones */
+.elemento2 {
+    transition: 0.5s;
+}
+
+.elemento2 {
+    &:hover {
+        scale: 1.1;
+        box-shadow: 0 0 10px #000;
+    }
+}
+
+.elemento1 {
+    transition: 0.5s;
+}
+
+.elemento1 {
+    &:hover {
+        scale: 1.1;
+        box-shadow: 0 0 10px #000;
+    }
+}
+
+.elemento4 {
+    transition: 0.5s;
+}
+
+.elemento4 {
+    &:hover {
+        scale: 1.1;
+        box-shadow: 0 0 10px #000;
+    }
+}

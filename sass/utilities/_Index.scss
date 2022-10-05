@@ -1,0 +1,239 @@
+//Nesting //
+/* Header */
+header {
+    background-color: $color-principal;
+    text-align: center;
+
+    .foto {
+        text-align: center;
+        @include medidas(150px, 150px)
+    }
+
+    .buscador {
+        height: 20px;
+        width: 32px;
+    }
+
+    .buscar {
+        text-align: right;
+    }
+
+    /* Menu */
+    .menu {
+        text-align: center;
+        box-sizing: border-box;
+        top: 300px;
+        bottom: 100px;
+        border: 1px solid $color-border-menu;
+        font-size: 0.8rem;
+        background-color: $color-principal;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .etiqueta1 {
+        text-decoration: none;
+        color: $color-font-menu;
+        border: 1px solid rgba(255, 255, 255, 0);
+    }
+
+    nav {
+        ul {
+            li {
+                display: inline-block;
+            }
+        }
+
+    }
+
+    .espacio {
+        background-color: $color-principal;
+    }
+}
+
+/* Principal */
+body {
+    background-color: $color-secundario;
+}
+
+main {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0.3rem;
+    border-radius: 0.2rem;
+    background-color: $color-principal;
+    box-shadow: 0.1rem 0.1rem 0.4rem;
+    text-align: center;
+    font-size: 0.7rem;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+    .texto {
+        font-size: 0.8rem;
+    }
+
+    .texto2 {
+        font-size: 1.3rem;
+    }
+
+    .texto1 {
+        font-size: 0.9rem;
+    }
+
+    .pepe {
+        text-align: center;
+        background-color: $color-relleno;
+        border-radius: 0.2rem;
+    }
+
+    .pepe2 {
+        background-color: $color-principal;
+        align-self: center;
+    }
+
+    .photo {
+        height: 18rem;
+        width: auto;
+        border-radius: 0.2rem;
+    }
+
+    /* iconos del contenido principal */
+    span {
+        color: $color-principal;
+        font-size: 20px;
+    }
+
+    div p {
+        top: 30px;
+        bottom: 10px;
+        display: inline-block;
+        box-sizing: border-box;
+    }
+
+    /* animaciones */
+    /* Contenido principal */
+    .pepe {
+        @extend %animacion;
+    }
+
+    .pepe {
+        &:hover {
+            @extend %animacion2;
+        }
+    }
+
+    .pepe2 {
+        @extend %animacion;
+    }
+
+    .pepe2 {
+        &:hover {
+            @extend %animacion2;
+        }
+    }
+}
+
+/*Contenido secundario */
+/* iconos del contenido secundario */
+div {
+    div {
+        p {
+            span {
+                color: $color-principal;
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+.iconoss {
+    text-align: center;
+}
+
+p {
+    top: 30px;
+    bottom: 10px;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.contenido {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    @include contenido(2, 13.9rem)
+}
+
+/*footer*/
+footer {
+    background-color: $color-principal;
+    font-size: 0.9rem;
+    color: $color-font-footer;
+
+    .sub {
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    .redes {
+        display: flex;
+        font-size: 1.5rem;
+        box-sizing: border-box;
+        background-color: $color-principal;
+        flex-direction: row-reverse;
+        gap: 0.5rem;
+        margin-right: 1rem;
+
+        a {
+            text-decoration: none;
+            list-style: none;
+            color: $color-font-footer;
+        }
+    }
+}
+
+/* animaciones */
+/* Contenido secundario*/
+.foto2 {
+    @extend %animacion;
+}
+
+.foto2 {
+    &:hover {
+        @extend %animacion2;
+    }
+}
+
+.menu {
+    transition: .5s ease all;
+}
+
+/*header*/
+.buscador {
+    @extend %animacion;
+}
+
+.buscador {
+    &:hover {
+        scale: 1.2;
+    }
+}
+
+/*menu */
+header {
+    nav {
+        ul {
+            li {
+                a {
+                    &:hover {
+                        color: rgb(0, 0, 0);
+                        background: linear-gradient(to bottom, rgb(233, 247, 205), rgba(255, 255, 255, 0.647));
+                        box-shadow: 0px 0px 7px rgb(106, 106, 106);
+                        scale: 1.05;
+                        border-radius: 3px;
+                    }
+                }
+            }
+        }
+    }
+}
